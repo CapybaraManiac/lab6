@@ -1,23 +1,26 @@
 export interface Exam {
   id: string;
+  abiturientId: string | null;
+  teacherId: string | null;
   subject: string;
   date: string;
-  teacherId: string;
+  score: number;
 }
 
 export class ExamModel implements Exam {
   id: string;
-
+  abiturientId: string | null;
+  teacherId: string | null;
   subject: string;
-
   date: string;
+  score: number;
 
-  teacherId: string;
-
-  constructor({ id, subject, date, teacherId }: Exam) {
+  constructor({ id, abiturientId, teacherId, subject, date, score }: Exam) {
     this.id = id;
+    this.abiturientId = abiturientId;
+    this.teacherId = teacherId;
     this.subject = subject;
     this.date = date;
-    this.teacherId = teacherId;
+    this.score = score;
   }
 } 

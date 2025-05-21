@@ -1,7 +1,10 @@
-import express from 'express';
-const router = express.Router();
-router.get('/', (_req, res) => {
-    res.json({ message: 'Get all users' });
-});
+import { Router } from 'express';
+import { getAllUsers, getUserById, createUser, updateUser, deleteUser, } from './user.controller.js';
+const router = Router();
+router.get('/', getAllUsers);
+router.get('/:id', getUserById);
+router.post('/', createUser);
+router.put('/:id', updateUser);
+router.delete('/:id', deleteUser);
 export { router as userRouter };
 //# sourceMappingURL=user.router.js.map

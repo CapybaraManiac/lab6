@@ -1,9 +1,9 @@
 import express from 'express';
-import { abiturientRouter } from './resources/abiturients/abiturient.router';
-import { examRouter } from './resources/exams/exam.router';
-import { teacherRouter } from './resources/teachers/teacher.router';
+import { abiturientRouter } from './resources/abiturients/abiturient.router.js';
+import { examRouter } from './resources/exams/exam.router.js';
+import { teacherRouter } from './resources/teachers/teacher.router.js';
 const app = express();
-const port = process.env['PORT'] || 3000;
+const port = process.env['PORT'] || 3001;
 app.use(express.json());
 // Routes
 app.use('/api/abiturients', abiturientRouter);

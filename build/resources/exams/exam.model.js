@@ -1,13 +1,17 @@
 export class ExamModel {
     id;
+    abiturientId;
+    teacherId;
     subject;
     date;
-    teacherId;
-    constructor({ id, subject, date, teacherId }) {
+    score;
+    constructor({ id, abiturientId, teacherId, subject, date, score }) {
         this.id = id;
+        this.abiturientId = abiturientId;
+        this.teacherId = teacherId;
         this.subject = subject;
         this.date = date;
-        this.teacherId = teacherId;
+        this.score = score;
     }
 }
 //# sourceMappingURL=exam.model.js.map

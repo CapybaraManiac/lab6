@@ -1,4 +1,4 @@
-import { User } from './user.model';
+import { User } from './user.model.js';
 
 const users: User[] = [];
 
@@ -28,7 +28,8 @@ export function update(id: string, userData: Partial<Omit<User, 'id'>>): User | 
     id: currentUser.id,
     firstName: userData.firstName ?? currentUser.firstName,
     lastName: userData.lastName ?? currentUser.lastName,
-    numCertificate: userData.numCertificate ?? currentUser.numCertificate
+    email: userData.email ?? currentUser.email,
+    role: userData.role ?? currentUser.role
   };
   
   users[index] = updatedUser;

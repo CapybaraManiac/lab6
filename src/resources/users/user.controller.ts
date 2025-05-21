@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import { User } from './user.model';
+import { User } from './user.model.js';
 import { 
   getUsers as getUsersService, 
   getUserById as getUserByIdService, 
   createUser as createUserService, 
   updateUser as updateUserService, 
   deleteUser as deleteUserService 
-} from './user.service';
+} from './user.service.js';
 
 export const getAllUsers = async (_req: Request, res: Response): Promise<void> => {
   try {

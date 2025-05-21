@@ -7,11 +7,8 @@ export interface Abiturient {
 
 export class AbiturientModel implements Abiturient {
   id: string;
-
   firstName: string;
-
   lastName: string;
-
   numCertificate: number;
 
   constructor({ id, firstName, lastName, numCertificate }: Abiturient) {

@@ -2,7 +2,8 @@ export interface User {
   id: string;
   firstName: string;
   lastName: string;
-  numCertificate: number;
+  email: string;
+  role: 'admin' | 'teacher' | 'student';
 }
 
 export class UserModel implements User {
@@ -12,12 +13,15 @@ export class UserModel implements User {
 
   lastName: string;
 
-  numCertificate: number;
+  email: string;
 
-  constructor({ id, firstName, lastName, numCertificate }: User) {
+  role: 'admin' | 'teacher' | 'student';
+
+  constructor({ id, firstName, lastName, email, role }: User) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.numCertificate = numCertificate;
+    this.email = email;
+    this.role = role;
   }
 } 

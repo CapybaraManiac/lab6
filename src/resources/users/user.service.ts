@@ -1,5 +1,5 @@
-import { User } from './user.model';
-import { findAll, findById, create, update, remove } from './user.memory.repository';
+import { User } from './user.model.js';
+import { findAll, findById, create, update, remove } from './user.memory.repository.js';
 
 export async function getUsers(): Promise<User[]> {
   return findAll();
